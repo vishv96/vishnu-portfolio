@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishnu Vijayan - Portfolio</title>
+    <title>Vishnu Vijayan - iOS Engineer</title>
     <style>
         :root {
-            --primary-color: #2563eb;
+            --primary-color: #0070ba; /* PayPal Blue style */
             --text-dark: #1f2937;
             --text-light: #6b7280;
             --bg-light: #f3f4f6;
@@ -26,7 +26,6 @@
             background-color: var(--bg-light);
         }
 
-        /* Layout */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -37,8 +36,8 @@
             background: var(--white);
             margin-bottom: 20px;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         /* Header */
@@ -55,20 +54,35 @@
             color: var(--text-dark);
         }
 
-        header p {
-            font-size: 1.2rem;
+        header .headline {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header .location {
             color: var(--text-light);
+            font-size: 0.95rem;
             margin-bottom: 20px;
         }
 
         .social-links a {
             text-decoration: none;
-            color: var(--primary-color);
-            margin: 0 10px;
+            color: var(--white);
+            background-color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 0 5px;
             font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-block;
         }
 
-        /* Headings */
+        .social-links a:hover {
+            opacity: 0.9;
+        }
+
         h2 {
             font-size: 1.5rem;
             margin-bottom: 20px;
@@ -77,34 +91,44 @@
             color: var(--text-dark);
         }
 
-        /* Experience Items */
+        /* Experience */
         .job {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .job-title {
-            font-weight: bold;
+            font-weight: 700;
             font-size: 1.1rem;
+            color: var(--text-dark);
         }
 
         .company {
             color: var(--primary-color);
+            font-weight: 600;
         }
 
         .date {
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-style: italic;
         }
 
         .job-desc {
-            color: var(--text-light);
+            color: var(--text-dark);
+            margin-top: 10px;
+            font-size: 0.95rem;
         }
 
         /* Skills */
@@ -115,22 +139,14 @@
         }
 
         .skill-tag {
-            background: var(--bg-light);
-            padding: 5px 15px;
+            background: #e0f2fe; /* Light blue */
+            color: #0369a1;      /* Dark blue text */
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .job-header {
-                flex-direction: column;
-            }
-            header {
-                padding: 40px 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -138,9 +154,12 @@
     <header>
         <div class="container">
             <h1>Vishnu Vijayan</h1>
-            <p>iOS Developer</p> <div class="social-links">
-                <a href="https://www.linkedin.com/in/vishnu-vijayan-75822154/" target="_blank">LinkedIn</a>
-                <a href="mailto:your-email@example.com">Email Me</a>
+            <p class="headline">iOS Engineer | SwiftUI | UIKit | TCA | MVI | MVVM</p>
+            <p class="location">📍 Etobicoke, Ontario, Canada</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/vishnu-vijayan-75822154/" target="_blank">LinkedIn Profile</a>
+                <a href="mailto:your-email@example.com">Contact Me</a>
             </div>
         </div>
     </header>
@@ -150,64 +169,6 @@
         <section>
             <h2>About Me</h2>
             <p>
-                Passionate professional with experience in [Industry]. Dedicated to building high-quality solutions and fostering team success. Experienced in managing projects from conception to completion.
-            </p>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Senior Developer</span> <span class="company">@ Company A</span>
-                    </div>
-                    <span class="date">Jan 2020 - Present</span>
-                </div>
-                <p class="job-desc">
-                    Led a team of 5 developers to build scalable web applications. Improved system performance by 30% through optimization.
-                </p>
-            </div>
-
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Software Engineer</span> <span class="company">@ Company B</span>
-                    </div>
-                    <span class="date">Jun 2017 - Dec 2019</span>
-                </div>
-                <p class="job-desc">
-                    Collaborated with cross-functional teams to deliver key features. Maintained legacy codebases and implemented modern testing frameworks.
-                </p>
-            </div>
-
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Team Leadership</span>
-                <span class="skill-tag">Communication</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Bachelor of Science in Computer Science</span>
-                    </div>
-                    <span class="date">2013 - 2017</span>
-                </div>
-                <p class="company">University Name</p>
-            </div>
-        </section>
-
-    </div>
-
-</body>
-</html>
+                Hello, I'm Vishnu Vijayan—an iOS Developer passionate about crafting exceptional software solutions. Based in Toronto, Ontario, Canada, I've journeyed through the dynamic landscape of software development, leveraging my expertise to drive innovation and create impactful experiences.
+                <br><br>
+                With a strong foundation in UIKit, Swift, SwiftUI, Combine, and Objective-C, I've contributed to diverse projects that have enriched my skills. Beyond coding, I've mentored fellow developers, fostering collaboration and growth. A music lover, movie enthusiast, and Sci-Fi follower, I embrace
